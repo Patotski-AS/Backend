@@ -1,5 +1,6 @@
 package com.example.springkotlinz
 
+import com.example.springkotlinz.domain.Person
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.web.bind.annotation.RequestMapping
@@ -10,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController
 class SpringKotlinZApplication {
 
     @RequestMapping("/")
-    fun hi(): String {
-        return "Hi"
+    fun hi(): Person {
+        return Person()
     }
 }
 

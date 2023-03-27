@@ -4,11 +4,13 @@ import com.example.springkotlinz.dao.PersonDao
 import com.example.springkotlinz.dto.AddPersonRequest
 import com.example.springkotlinz.dto.PersonResponse
 import com.example.springkotlinz.dto.UpdatePersonRequest
+import com.example.springkotlinz.transformer.AddPersonRequestTransformer
 import org.springframework.stereotype.Service
 
 @Service
 class PersonManagementServiceImpl(
-    private val personDao: PersonDao
+    private val personDao: PersonDao,
+    private val addPersonRequestTransformer: AddPersonRequestTransformer
 ) : PersonManagementService {
     override fun findById(id: Long): PersonResponse? {
         TODO("Not yet implemented")
